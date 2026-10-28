@@ -25,30 +25,49 @@ tabindex="0">
  <div class="row">
  <!-- Sidebar Navigation -->
  <div class="col-md-3">
- <div id="dashboard-nav" class="list-group position-sticky top0">
- <a class="list-group-item list-group-item-action"
-href="#frequency-table">Frequency Tables (One-way)
- </a>
- </div>
+    <div id="dashboard-nav" class="list-group position-sticky top0">
+        <a class="list-group-item list-group-item-action"
+            href="#frequency-table">Frequency Tables (One-way)
+        </a>
+        <a class="list-group-item list-group-item-action"
+            href="#minimum-price">Minimum Price > 5000
+        </a>
+        <a class="list-group-item list-group-item-action"
+            href="#grouped-price">Minimum Price > 5000 & Grouped by
+        </a>
+    </div>
  </div>
  <!-- Scrollable Content -->
  <div class="col-md-9">
- <div class="scrollspy-example" data-bs-spy="scroll" data-bstarget="#dashboard-nav"
- data-bs-smooth-scroll="true" tabindex="0">
- <h1 class="text-center text-primary mb-4"> Vehicle Machine
-Learning Dashboard </h1>
- <div id="frequency-table" class="card shadow mb-5">
- <div class="card-header bg-info text-white">
- Frequency Tables (One-way)
- </div>
- <div class="card-body">
- {{ frequency_table|safe }}
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
+    <div class="scrollspy-example" data-bs-spy="scroll" data-bstarget="#dashboard-nav" data-bs-smooth-scroll="true" tabindex="0">
+        <h1 class="text-center text-primary mb-4"> Vehicle Machine Learning Dashboard </h1>
+        <div id="frequency-table" class="card shadow mb-5">
+            <div class="card-header bg-info text-white">
+                Frequency Tables (One-way)
+            </div>
+            <div class="card-body">
+                {{ frequency_table|safe }}
+            </div>
+        </div>
+        <div id="minimum-price" class="card shadow mb-5">
+            <div class="card-header bg-success text-white">
+                Minimum Price > 5000
+            </div>
+            <div class="card-body">
+                {{ minimum_price|safe }}
+            </div>
+        </div>
+        <div id="grouped-price" class="card shadow mb-5">
+            <div class="card-header bg-success text-white">
+                Minimum Price > 5000 & Grouped by
+            </div>
+            <div class="card-body">
+                {{ grouped_price|safe }}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
  <script
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.
 js"></script>
